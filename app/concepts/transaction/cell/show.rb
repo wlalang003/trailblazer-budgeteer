@@ -22,7 +22,7 @@ module Transaction::Cell
     end
 
     def back
-      link_to "Back to posts list", transactions_path
+      link_to "Back to transactions list", transactions_path
     end
 
     def transaction_type

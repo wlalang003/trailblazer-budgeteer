@@ -40,8 +40,12 @@ class TransactionsController < ApplicationController
     #   end
     # end
     run Transaction::Create do |result|
+      flash[:notice] = "#{result["model"].name} has been created"
       return redirect_to transactions_path
     end
+
+    # This can also be called this way
+    # Transaction::Create.call(params, options)
 
     render cell(Transaction::Cell::New, @form), layout: false
   end
