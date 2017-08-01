@@ -1,0 +1,15 @@
+.post-preview
+  h2.post-title
+    = name
+    = link_to 'Edit', edit_transaction_url(model.id)
+  p.post-meta
+    = "Posted at #{created_at}"
+    p
+      = description
+
+    p
+      = "$#{amount}"
+
+    p
+      = transaction_type
+hr

@@ -1,0 +1,20 @@
+.post-preview
+  h1
+    = name
+  p.post-meta
+    = "Posted at #{time}"
+    p
+      = description
+
+    p
+      = "$#{amount}"
+
+    p
+      = transaction_type
+.row
+  .col-sm-3.text-center
+    h6 = edit
+  .col-sm-6.text-center
+    h6 = delete
+  .col-sm-3.text-center
+    h6 = back

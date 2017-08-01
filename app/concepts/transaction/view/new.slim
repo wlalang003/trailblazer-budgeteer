@@ -1,0 +1,23 @@
+#:new
+.row.new
+  h1 New Transaction
+
+  = simple_form_for model do |f|
+    .row
+      .col-sm-12
+        = f.input :name, placeholder: "Name", label: false
+    .row
+      .col-sm-12
+        = f.input :description, placeholder: "What is this transaction about?", label: false, as: :text
+    .row
+      .col-sm-12
+        = f.input :amount, label: false, as: :integer, placeholder: 'Amount'
+    .row
+      .col-sm-12
+        = f.collection_radio_buttons :ttype, *model.ttypes, label: false
+    .row
+      .col-sm-12
+        = f.submit 'Create Transaction'
+#:new end
+
+= model.errors.messages

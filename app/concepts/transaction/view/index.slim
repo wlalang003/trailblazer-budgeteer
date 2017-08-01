@@ -1,0 +1,4 @@
+= link_to 'New Transaction', new_transaction_url
+
+h6 = "#{total} Transactions"
+= cell(Transaction::Cell::Item, collection: model)
